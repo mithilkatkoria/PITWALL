@@ -1,0 +1,51 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL
+configfile: pytest.ini
+collecting ... collected 41 items
+
+tests/test_models.py::test_race_boundaries[1] PASSED                     [  2%]
+tests/test_models.py::test_race_boundaries[500] PASSED                   [  4%]
+tests/test_models.py::test_invalid_race_length[0] PASSED                 [  7%]
+tests/test_models.py::test_invalid_race_length[-1] PASSED                [  9%]
+tests/test_models.py::test_invalid_race_length[501] PASSED               [ 12%]
+tests/test_models.py::test_invalid_race_length[2.5] PASSED               [ 14%]
+tests/test_models.py::test_invalid_race_length[True] PASSED              [ 17%]
+tests/test_models.py::test_invalid_race_length[5] PASSED                 [ 19%]
+tests/test_models.py::test_invalid_parameters[-1] PASSED                 [ 21%]
+tests/test_models.py::test_invalid_parameters[nan] PASSED                [ 24%]
+tests/test_models.py::test_invalid_parameters[inf] PASSED                [ 26%]
+tests/test_models.py::test_invalid_parameters[True] PASSED               [ 29%]
+tests/test_models.py::test_invalid_parameters[fast] PASSED               [ 31%]
+tests/test_models.py::test_missing_and_duplicate_tyres PASSED            [ 34%]
+tests/test_models.py::test_invalid_start[None] PASSED                    [ 36%]
+tests/test_models.py::test_invalid_start[SOFT] PASSED                    [ 39%]
+tests/test_models.py::test_invalid_start[0] PASSED                       [ 41%]
+tests/test_models.py::test_stop_order_and_race_end PASSED                [ 43%]
+tests/test_models.py::test_zero_and_negative_inputs PASSED               [ 46%]
+tests/test_models.py::test_results_and_state_validation PASSED           [ 48%]
+tests/test_physics.py::test_manual_degradation[0-0] PASSED               [ 51%]
+tests/test_physics.py::test_manual_degradation[1-0.2] PASSED             [ 53%]
+tests/test_physics.py::test_manual_degradation[3-0.6] PASSED             [ 56%]
+tests/test_physics.py::test_zero_degradation PASSED                      [ 58%]
+tests/test_physics.py::test_invalid_age[-1] PASSED                       [ 60%]
+tests/test_physics.py::test_invalid_age[0.5] PASSED                      [ 63%]
+tests/test_physics.py::test_invalid_age[True] PASSED                     [ 65%]
+tests/test_physics.py::test_fuel_manual PASSED                           [ 68%]
+tests/test_physics.py::test_invalid_lap[0] PASSED                        [ 70%]
+tests/test_physics.py::test_invalid_lap[6] PASSED                        [ 73%]
+tests/test_physics.py::test_invalid_lap[1.5] PASSED                      [ 75%]
+tests/test_physics.py::test_invalid_lap[True] PASSED                     [ 78%]
+tests/test_physics.py::test_lap_manual PASSED                            [ 80%]
+tests/test_engine.py::test_five_lap_manual_oracle PASSED                 [ 82%]
+tests/test_engine.py::test_no_stop_manual PASSED                         [ 85%]
+tests/test_engine.py::test_race_boundaries[1] PASSED                     [ 87%]
+tests/test_engine.py::test_race_boundaries[500] PASSED                   [ 90%]
+tests/test_engine.py::test_consecutive_same_compound_stops PASSED        [ 92%]
+tests/test_engine.py::test_final_stop_rejected PASSED                    [ 95%]
+tests/test_engine.py::test_zero_pit_loss PASSED                          [ 97%]
+tests/test_engine.py::test_overflow_rejected PASSED                      [100%]
+
+- generated xml file: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL\evidence\test-runs\TEST-I05-20260908T210214046535Z\results.xml -
+============================= 41 passed in 0.24s ==============================
