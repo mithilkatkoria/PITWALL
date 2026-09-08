@@ -1,0 +1,23 @@
+{
+  "started_utc": "20260908T210046769795Z",
+  "command": [
+    "C:\\Users\\mithi\\OneDrive - vmkaccountants1\\Mithil Katkoria\\mybriefcase\\codex new projects\\CS NEA\\PITWALL\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-v",
+    "--junitxml=C:\\Users\\mithi\\OneDrive - vmkaccountants1\\Mithil Katkoria\\mybriefcase\\codex new projects\\CS NEA\\PITWALL\\evidence\\test-runs\\TEST-I03-20260908T210046769795Z\\results.xml",
+    "tests/test_models.py",
+    "tests/test_physics.py"
+  ],
+  "exit_code": 0,
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source_sha256": {
+    "src\\pitwall\\__init__.py": "6728d184e812d376bc97902d17ce3310459aef4bceac112d5edefde9b06dd5db",
+    "src\\pitwall\\models.py": "54dddc293dab64ff59744d35d5662d06f9df9912ec882e32e1e7c4e703d5085a",
+    "src\\pitwall\\physics.py": "9357559c256c18690d3061df63238513b4f0f13d7edd40c07a00a87d507eee90",
+    "tests\\conftest.py": "b0255fc5c683d47762048db2e455c5c4302bb96869719c03383d72ee447959e3",
+    "tests\\test_models.py": "0b40054842ebdee746e82555f0ebe272b6c2b19bd679167810d0447acd3c6618",
+    "tests\\test_physics.py": "fd8f9c5515a4a2f59bc32c27cca306647df949a0d194f96a7c40661cadf63054"
+  }
+}
