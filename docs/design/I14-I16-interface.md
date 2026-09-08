@@ -1,0 +1,9 @@
+# Iterations 14 and16: advanced controls and charts
+
+FR09..FR12. Preserve first-milestone MainWindow and extend it with AdvancedWindow. Add an experiments tab for initial weather, penalties, seed/noise, event text, Monte Carlo count/SC probability/duration, and search controls. Event syntax `10:Wet, 15:SC_START, 18:SC_END`; existing lap ordering/ties preserved. Add population histogram and ranked candidate plot using actual results only.
+
+Long runs use QThread with immutable input snapshot, cancellation Event and result/error signals. Do not touch widgets from worker. Input revision increments on edits; if results return for an old revision, discard display. One job at a time. Closing while running requests cancellation and keeps window alive until worker completes, avoiding destroying a running QThread.
+
+Search output states exact candidate count, best compounds/stops, baseline totals and fixed-events/no-noise assumption. Monte Carlo uses the first two strategy rows, explicitly labels A and B, reports summary and win/tie percentages. Export JSON retains complete snapshot, controls and actual candidate/trial output. Save/load scenario dialogs remain separate. Loading validates the entire file and widget representability before modifying widgets; unsupported precision/ranges produce an error, never silent clamping. Per-stop stationary override syntax `25:Hard:3.0` supports faithful loaded stops.
+
+Planned TEST-I16: event parser valid/invalid; populated scenario round-trip through widgets; failed/unrepresentable load leaves current inputs untouched; asynchronous small search returns candidates and actual chart; tiny MC returns trial summaries; cancel contract; full regression. Actual capture after integration. Manual usability and teacher/candidate explanation remain pending.

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="5" time="0.392" timestamp="2026-09-08T22:25:24.577049+01:00" hostname="m1t-xz"><testcase classname="tests.test_final_robustness" name="test_json_collection_types[events]" time="0.045"><failure message="Failed: DID NOT RAISE ValueError">config = RaceConfig(laps=5, circuit=Circuit(name='Manual example', base_lap_time=90, pit_lane_loss=20), driver=Driver(name='Ref...(name=&lt;Compound.HARD: 'Hard'&gt;, base_pace_delta=1, degradation_rate=0.05, recommended_life=30)), initial_fuel_penalty=2)
+tmp_path = WindowsPath('C:/Users/mithi/AppData/Local/Temp/pytest-of-mithi/pytest-2/test_json_collection_types_eve0')
+field = 'events'
+
+    @pytest.mark.parametrize('field', ['events','planned_stops'])
+    def test_json_collection_types(config,tmp_path,field):
+        path = tmp_path/'bad.json'
+        save_scenario(path,Scenario(config,Conditions(),(Strategy('A',Compound.SOFT),)))
+        data = json.loads(path.read_text())
+        target = data['conditions'] if field == 'events' else data['strategies'][0]
+        target[field] = {}  # An object must not be accepted as an empty list.
+        path.write_text(json.dumps(data))
+&gt;       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\test_final_robustness.py:23: Failed</failure></testcase><testcase classname="tests.test_final_robustness" name="test_json_collection_types[planned_stops]" time="0.014"><failure message="Failed: DID NOT RAISE ValueError">config = RaceConfig(laps=5, circuit=Circuit(name='Manual example', base_lap_time=90, pit_lane_loss=20), driver=Driver(name='Ref...(name=&lt;Compound.HARD: 'Hard'&gt;, base_pace_delta=1, degradation_rate=0.05, recommended_life=30)), initial_fuel_penalty=2)
+tmp_path = WindowsPath('C:/Users/mithi/AppData/Local/Temp/pytest-of-mithi/pytest-2/test_json_collection_types_pla0')
+field = 'planned_stops'
+
+    @pytest.mark.parametrize('field', ['events','planned_stops'])
+    def test_json_collection_types(config,tmp_path,field):
+        path = tmp_path/'bad.json'
+        save_scenario(path,Scenario(config,Conditions(),(Strategy('A',Compound.SOFT),)))
+        data = json.loads(path.read_text())
+        target = data['conditions'] if field == 'events' else data['strategies'][0]
+        target[field] = {}  # An object must not be accepted as an empty list.
+        path.write_text(json.dumps(data))
+&gt;       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\test_final_robustness.py:23: Failed</failure></testcase><testcase classname="tests.test_final_robustness" name="test_independent_search_oracle" time="0.005" /><testcase classname="tests.test_final_robustness" name="test_trial_reconstruction" time="0.006" /><testcase classname="tests.test_final_robustness" name="test_maximum_comparison" time="0.155" /></testsuite></testsuites>

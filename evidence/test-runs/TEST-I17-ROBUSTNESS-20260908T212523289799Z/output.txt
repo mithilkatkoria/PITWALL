@@ -1,0 +1,57 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\mithi\AppData\Local\Temp\pitwall-0460-venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL
+configfile: pytest.ini
+collecting ... collected 5 items
+
+tests/test_final_robustness.py::test_json_collection_types[events] FAILED [ 20%]
+tests/test_final_robustness.py::test_json_collection_types[planned_stops] FAILED [ 40%]
+tests/test_final_robustness.py::test_independent_search_oracle PASSED    [ 60%]
+tests/test_final_robustness.py::test_trial_reconstruction PASSED         [ 80%]
+tests/test_final_robustness.py::test_maximum_comparison PASSED           [100%]
+
+================================== FAILURES ===================================
+_____________________ test_json_collection_types[events] ______________________
+
+config = RaceConfig(laps=5, circuit=Circuit(name='Manual example', base_lap_time=90, pit_lane_loss=20), driver=Driver(name='Ref...(name=<Compound.HARD: 'Hard'>, base_pace_delta=1, degradation_rate=0.05, recommended_life=30)), initial_fuel_penalty=2)
+tmp_path = WindowsPath('C:/Users/mithi/AppData/Local/Temp/pytest-of-mithi/pytest-2/test_json_collection_types_eve0')
+field = 'events'
+
+    @pytest.mark.parametrize('field', ['events','planned_stops'])
+    def test_json_collection_types(config,tmp_path,field):
+        path = tmp_path/'bad.json'
+        save_scenario(path,Scenario(config,Conditions(),(Strategy('A',Compound.SOFT),)))
+        data = json.loads(path.read_text())
+        target = data['conditions'] if field == 'events' else data['strategies'][0]
+        target[field] = {}  # An object must not be accepted as an empty list.
+        path.write_text(json.dumps(data))
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\test_final_robustness.py:23: Failed
+__________________ test_json_collection_types[planned_stops] __________________
+
+config = RaceConfig(laps=5, circuit=Circuit(name='Manual example', base_lap_time=90, pit_lane_loss=20), driver=Driver(name='Ref...(name=<Compound.HARD: 'Hard'>, base_pace_delta=1, degradation_rate=0.05, recommended_life=30)), initial_fuel_penalty=2)
+tmp_path = WindowsPath('C:/Users/mithi/AppData/Local/Temp/pytest-of-mithi/pytest-2/test_json_collection_types_pla0')
+field = 'planned_stops'
+
+    @pytest.mark.parametrize('field', ['events','planned_stops'])
+    def test_json_collection_types(config,tmp_path,field):
+        path = tmp_path/'bad.json'
+        save_scenario(path,Scenario(config,Conditions(),(Strategy('A',Compound.SOFT),)))
+        data = json.loads(path.read_text())
+        target = data['conditions'] if field == 'events' else data['strategies'][0]
+        target[field] = {}  # An object must not be accepted as an empty list.
+        path.write_text(json.dumps(data))
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\test_final_robustness.py:23: Failed
+- generated xml file: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL\evidence\test-runs\TEST-I17-ROBUSTNESS-20260908T212523289799Z\results.xml -
+=========================== short test summary info ===========================
+FAILED tests/test_final_robustness.py::test_json_collection_types[events] - F...
+FAILED tests/test_final_robustness.py::test_json_collection_types[planned_stops]
+========================= 2 failed, 3 passed in 0.59s =========================

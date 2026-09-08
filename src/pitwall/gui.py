@@ -13,6 +13,7 @@ from .comparison import MAX_STRATEGIES, compare, summary
 from .defaults import default_config
 from .engine import simulate
 from .models import Circuit, Compound, Driver, PitStopPlan, RaceConfig, Strategy, TyreCompound
+from .conditions import Conditions
 
 
 def parse_stops(text: str, stationary: float) -> tuple[PitStopPlan, ...]:
@@ -21,8 +22,12 @@ def parse_stops(text: str, stationary: float) -> tuple[PitStopPlan, ...]:
     stops = []
     for entry in text.split(','):
         try:
-            lap, tyre = entry.split(':')
-            stops.append(PitStopPlan(int(lap.strip()), Compound(tyre.strip().capitalize()), stationary))
+            parts = entry.split(':')
+            if len(parts) not in (2, 3):
+                raise ValueError("Expected lap:tyre[:stationary]")
+            lap, tyre = parts[:2]
+            service = float(parts[2]) if len(parts) == 3 else stationary
+            stops.append(PitStopPlan(int(lap.strip()), Compound(tyre.strip().capitalize()), service))
         except (ValueError, TypeError) as exc:
             raise ValueError(f"Invalid stop '{entry.strip()}'. Use 15:Medium, 35:Hard with positive lap numbers.") from exc
     return tuple(stops)
@@ -61,7 +66,7 @@ class MainWindow(QMainWindow):
         title = QLabel("PITWALL  /  RACE STRATEGY LAB")
         title.setObjectName("title")
         layout.addWidget(title)
-        layout.addWidget(QLabel("DETERMINISTIC DRY RACE     |     Single-car model     |     Illustrative parameters, not telemetry"))
+        layout.addWidget(QLabel("SINGLE-CAR STRATEGY MODEL     |     Illustrative parameters, not telemetry"))
         splitter = QSplitter(Qt.Orientation.Horizontal)
         layout.addWidget(splitter, 1)
 
@@ -115,6 +120,7 @@ class MainWindow(QMainWindow):
         self.headline.setObjectName("headline")
         right.addWidget(self.headline)
         tabs = QTabWidget()
+        self.tabs = tabs
         right.addWidget(tabs, 1)
         self.figure = Figure(facecolor="#111d2c", layout="constrained")
         self.canvas = FigureCanvasQTAgg(self.figure)
@@ -150,6 +156,7 @@ class MainWindow(QMainWindow):
         sl.addLayout(buttons)
         right.addWidget(strategies_box)
         actions = QHBoxLayout()
+        self.actions = actions
         self.simulate_button = QPushButton("SIMULATE SELECTED")
         self.simulate_button.clicked.connect(lambda: self.run(False))
         self.compare_button = QPushButton("COMPARE ALL")
@@ -257,11 +264,12 @@ class MainWindow(QMainWindow):
         self.invalidate()
         try:
             config = self.read_config()
+            conditions = self.read_conditions()
             if comparison:
                 strategies = tuple(self.read_strategy(r) for r in range(self.strategies.rowCount()))
-                self.results = compare(config, strategies)
+                self.results = compare(config, strategies, conditions)
             else:
-                self.results = (simulate(config, self.read_strategy(self.strategies.currentRow())),)
+                self.results = (simulate(config, self.read_strategy(self.strategies.currentRow()), conditions),)
         except ValueError as exc:
             self.status.setStyleSheet("color: #ffab91")
             self.status.setText(f"Input error: {exc}")
@@ -297,9 +305,13 @@ class MainWindow(QMainWindow):
                                       l.tyre_age, l.degradation_loss, l.fuel_effect, l.pit_loss]
                                      for l in self.results[index].laps])
 
+    def read_conditions(self):
+        return Conditions()
+
 
 def main():
     app = QApplication.instance() or QApplication([])
-    window = MainWindow()
+    from .advanced_gui import AdvancedWindow
+    window = AdvancedWindow()
     window.show()
     return app.exec()
