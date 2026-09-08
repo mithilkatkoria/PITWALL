@@ -1,0 +1,12 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\mithi\AppData\Local\Temp\pitwall-0460-venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL
+configfile: pytest.ini
+collecting ... collected 2 items
+
+tests/test_events.py::test_order_and_ties PASSED                         [ 50%]
+tests/test_events.py::test_bad_events PASSED                             [100%]
+
+- generated xml file: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL\evidence\test-runs\TEST-I08-20260908T210944391018Z\results.xml -
+============================== 2 passed in 0.18s ==============================

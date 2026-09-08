@@ -1,0 +1,13 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\mithi\AppData\Local\Temp\pitwall-0460-venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL
+configfile: pytest.ini
+collecting ... collected 3 items
+
+tests/test_optimiser.py::test_tiny_space PASSED                          [ 33%]
+tests/test_optimiser.py::test_minimum_stints_and_baselines PASSED        [ 66%]
+tests/test_optimiser.py::test_limit_and_cancel PASSED                    [100%]
+
+- generated xml file: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL\evidence\test-runs\TEST-I13-20260908T211637569849Z\results.xml -
+============================== 3 passed in 0.12s ==============================

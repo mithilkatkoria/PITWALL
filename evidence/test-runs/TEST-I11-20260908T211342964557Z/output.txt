@@ -1,0 +1,31 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\mithi\AppData\Local\Temp\pitwall-0460-venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL
+configfile: pytest.ini
+collecting ... collected 21 items
+
+tests/test_randomness.py::test_seed_reproduction PASSED                  [  4%]
+tests/test_randomness.py::test_bad_seed[-1] PASSED                       [  9%]
+tests/test_randomness.py::test_bad_seed[4294967296] PASSED               [ 14%]
+tests/test_randomness.py::test_bad_seed[True] PASSED                     [ 19%]
+tests/test_randomness.py::test_bad_seed[1.5] PASSED                      [ 23%]
+tests/test_randomness.py::test_bad_seed[42] PASSED                       [ 28%]
+tests/test_randomness.py::test_bad_amplitude PASSED                      [ 33%]
+tests/test_engine.py::test_five_lap_manual_oracle PASSED                 [ 38%]
+tests/test_engine.py::test_no_stop_manual PASSED                         [ 42%]
+tests/test_engine.py::test_race_boundaries[1] PASSED                     [ 47%]
+tests/test_engine.py::test_race_boundaries[500] PASSED                   [ 52%]
+tests/test_engine.py::test_consecutive_same_compound_stops PASSED        [ 57%]
+tests/test_engine.py::test_final_stop_rejected PASSED                    [ 61%]
+tests/test_engine.py::test_zero_pit_loss PASSED                          [ 66%]
+tests/test_engine.py::test_overflow_rejected PASSED                      [ 71%]
+tests/test_conditions.py::test_weather_transitions PASSED                [ 76%]
+tests/test_conditions.py::test_weather_ties PASSED                       [ 80%]
+tests/test_conditions.py::test_safety_car_manual PASSED                  [ 85%]
+tests/test_conditions.py::test_invalid_safety_factor[-1] PASSED          [ 90%]
+tests/test_conditions.py::test_invalid_safety_factor[1.01] PASSED        [ 95%]
+tests/test_conditions.py::test_invalid_safety_factor[nan] PASSED         [100%]
+
+- generated xml file: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL\evidence\test-runs\TEST-I11-20260908T211342964557Z\results.xml -
+============================= 21 passed in 0.25s ==============================

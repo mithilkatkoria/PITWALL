@@ -1,0 +1,35 @@
+{
+  "started_utc": "20260908T211214733077Z",
+  "command": [
+    "C:\\Users\\mithi\\AppData\\Local\\Temp\\pitwall-0460-venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-v",
+    "--junitxml=C:\\Users\\mithi\\OneDrive - vmkaccountants1\\Mithil Katkoria\\mybriefcase\\codex new projects\\CS NEA\\PITWALL\\evidence\\test-runs\\TEST-I10-20260908T211214733077Z\\results.xml",
+    "tests/test_engine.py",
+    "tests/test_conditions.py",
+    "tests/test_events.py"
+  ],
+  "exit_code": 0,
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source_sha256": {
+    "src\\pitwall\\__init__.py": "6728d184e812d376bc97902d17ce3310459aef4bceac112d5edefde9b06dd5db",
+    "src\\pitwall\\comparison.py": "91d5c1541d406b7e9af1d1e31413c1f7181581ef3b617fa032f974cad6f2cc69",
+    "src\\pitwall\\conditions.py": "64ea899ad6e4101e062ad023663a0de273279b3ee789441f3af44a8f894d5cf9",
+    "src\\pitwall\\defaults.py": "50782823d7c138509342b3e0f178960029e9aea1abf72b338ab3e6cfcab42fd0",
+    "src\\pitwall\\engine.py": "9b00fcff5e1bc425d4188afa9887db5e3593ee88a76887baf377fe6732e7ef9c",
+    "src\\pitwall\\events.py": "a45ebac9055664f0cb5da94bfcaf9f5cc1fa88b21f2996bb715da45577a1eb27",
+    "src\\pitwall\\gui.py": "ec0809a5cd377a8ce80ed2315aaa5c37e53c61d7254bb0caf0e3bf139d943891",
+    "src\\pitwall\\models.py": "54dddc293dab64ff59744d35d5662d06f9df9912ec882e32e1e7c4e703d5085a",
+    "src\\pitwall\\physics.py": "9357559c256c18690d3061df63238513b4f0f13d7edd40c07a00a87d507eee90",
+    "tests\\conftest.py": "b0255fc5c683d47762048db2e455c5c4302bb96869719c03383d72ee447959e3",
+    "tests\\test_comparison.py": "b45e2b8db9fccac2acb8b982e91ff2661839d26899c9d310291fcfe4cc6c0567",
+    "tests\\test_conditions.py": "488ff6f7c1bf548c3da3930dc07bb1a1ecf99dcffb9f2324745869039a4af2b6",
+    "tests\\test_engine.py": "5704d1a1a64078482146d0a599322c7b566f0ad7626506864bda04146de84764",
+    "tests\\test_events.py": "77934c0cf582dd764bd7539275d76217d50e3432aa6a1ca98d8c8cc7868d5c39",
+    "tests\\test_gui.py": "a275cbf7c5fef1c28c39f01f9f5fba2cc45ac8c787cb7685becd272611bc03f3",
+    "tests\\test_models.py": "0b40054842ebdee746e82555f0ebe272b6c2b19bd679167810d0447acd3c6618",
+    "tests\\test_physics.py": "fd8f9c5515a4a2f59bc32c27cca306647df949a0d194f96a7c40661cadf63054"
+  }
+}

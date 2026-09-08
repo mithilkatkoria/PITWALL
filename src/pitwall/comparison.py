@@ -1,17 +1,18 @@
 """Comparison under identical conditions. Summary metrics include pit laps."""
 from .engine import simulate
 from .models import RaceConfig, Strategy, StrategyResult
+from .conditions import Conditions
 
 MAX_STRATEGIES = 20
 
 
-def compare(config: RaceConfig, strategies: tuple[Strategy, ...]) -> tuple[StrategyResult, ...]:
+def compare(config: RaceConfig, strategies: tuple[Strategy, ...], conditions: Conditions | None = None) -> tuple[StrategyResult, ...]:
     if not 2 <= len(strategies) <= MAX_STRATEGIES:
         raise ValueError(f"Compare between 2 and {MAX_STRATEGIES} strategies")
     names = [s.name.strip().casefold() for s in strategies]
     if len(set(names)) != len(names):
         raise ValueError("Strategy names must be unique")
-    return tuple(sorted((simulate(config, s) for s in strategies), key=lambda r: r.total_time))
+    return tuple(sorted((simulate(config, s, conditions) for s in strategies), key=lambda r: r.total_time))
 
 
 def summary(result: StrategyResult) -> dict:
