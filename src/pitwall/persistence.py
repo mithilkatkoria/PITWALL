@@ -50,6 +50,12 @@ def fields(data, expected):
     return dict(data)
 
 
+def array(data, name):
+    if not isinstance(data, list):
+        raise ValueError(f"{name} must be a JSON array")
+    return data
+
+
 def from_data(data: dict) -> Scenario:
     try:
         top = fields(data, ("schema_version", "config", "conditions", "strategies"))
@@ -59,7 +65,7 @@ def from_data(data: dict) -> Scenario:
         circuit = Circuit(**fields(race["circuit"], ("name", "base_lap_time", "pit_lane_loss")))
         driver = Driver(**fields(race["driver"], ("name", "pace_delta")))
         tyres = []
-        for tyre in race["tyres"]:
+        for tyre in array(race["tyres"], "Tyres"):
             t = fields(tyre, ("name", "base_pace_delta", "degradation_rate", "recommended_life"))
             t["name"] = Compound(t["name"])
             tyres.append(TyreCompound(**t))
@@ -67,15 +73,15 @@ def from_data(data: dict) -> Scenario:
         cond = fields(top["conditions"], ("initial_weather", "events", "damp_penalty", "wet_penalty", "safety_car_penalty", "safety_car_pit_factor", "seed", "variation"))
         cond["initial_weather"] = Weather(cond["initial_weather"])
         events = []
-        for event in cond["events"]:
+        for event in array(cond["events"], "Events"):
             e = fields(event, ("lap", "kind", "weather"))
             events.append(RaceEvent(e["lap"], EventType(e["kind"]), Weather(e["weather"]) if e["weather"] is not None else None))
         cond["events"] = tuple(events)
         strategies = []
-        for strategy in top["strategies"]:
+        for strategy in array(top["strategies"], "Strategies"):
             s = fields(strategy, ("name", "starting_compound", "planned_stops"))
             stops = []
-            for stop in s["planned_stops"]:
+            for stop in array(s["planned_stops"], "Planned stops"):
                 p = fields(stop, ("lap", "compound", "stationary_time"))
                 stops.append(PitStopPlan(p["lap"], Compound(p["compound"]), p["stationary_time"]))
             strategies.append(Strategy(s["name"], Compound(s["starting_compound"]), tuple(stops)))

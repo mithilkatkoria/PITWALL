@@ -1,0 +1,176 @@
+commit cdd4bf2254c6e7679139da4217d0e50be5025285
+Author:     mithil <mithil.katkoria@gmail.com>
+AuthorDate: Tue Sep 8 22:26:34 2026 +0100
+Commit:     mithil <mithil.katkoria@gmail.com>
+CommitDate: Tue Sep 8 22:26:34 2026 +0100
+
+    Preserve integrated GUI and genuine JSON robustness failures
+
+ docs/design/I14-I16-interface.md                   |   9 +
+ docs/design/I15-persistence.md                     |  18 ++
+ docs/design/I17-verification.md                    |   9 +
+ docs/iterations/I13.md                             |   7 +
+ docs/iterations/I14-I16.md                         |   7 +
+ docs/iterations/I15.md                             |   5 +
+ docs/testing/FAIL-I17-01.md                        |  11 +
+ .../TEST-I15-20260908T211824033057Z/metadata.json  |  40 +++
+ .../TEST-I15-20260908T211824033057Z/output.txt     |  17 ++
+ .../TEST-I15-20260908T211824033057Z/results.xml    |   1 +
+ .../TEST-I16-20260908T212235136707Z/metadata.json  |  41 +++
+ .../TEST-I16-20260908T212235136707Z/output.txt     |  90 ++++++
+ .../TEST-I16-20260908T212235136707Z/results.xml    |   1 +
+ .../metadata.json                                  |  43 +++
+ .../output.txt                                     |  57 ++++
+ .../results.xml                                    |  33 +++
+ src/pitwall/advanced_gui.py                        | 310 +++++++++++++++++++++
+ src/pitwall/gui.py                                 |  24 +-
+ src/pitwall/persistence.py                         | 126 +++++++++
+ tests/test_advanced_gui.py                         |  64 +++++
+ tests/test_final_robustness.py                     |  61 ++++
+ tests/test_persistence.py                          |  42 +++
+ 22 files changed, 1010 insertions(+), 6 deletions(-)
+
+commit 19608f11da41d1e5801c84cce235dbe90e17ec17
+Author:     mithil <mithil.katkoria@gmail.com>
+AuthorDate: Tue Sep 8 22:16:39 2026 +0100
+Commit:     mithil <mithil.katkoria@gmail.com>
+CommitDate: Tue Sep 8 22:16:39 2026 +0100
+
+    Add tested events seeded simulation Monte Carlo and bounded search
+
+ docs/design/I09-weather.md                         | 15 +++++
+ docs/design/I10-safety-car.md                      | 15 +++++
+ docs/design/I11-randomness.md                      | 14 +++++
+ docs/design/I12-monte-carlo.md                     | 21 +++++++
+ docs/design/I13-optimiser.md                       | 21 +++++++
+ docs/iterations/I08.md                             |  7 +++
+ docs/iterations/I09.md                             |  7 +++
+ docs/iterations/I10.md                             |  7 +++
+ docs/iterations/I11.md                             |  7 +++
+ docs/iterations/I12.md                             |  7 +++
+ .../TEST-I08-20260908T210944391018Z/metadata.json  | 31 +++++++++
+ .../TEST-I08-20260908T210944391018Z/output.txt     | 12 ++++
+ .../TEST-I08-20260908T210944391018Z/results.xml    |  1 +
+ .../TEST-I09-20260908T211102758207Z/metadata.json  | 35 +++++++++++
+ .../TEST-I09-20260908T211102758207Z/output.txt     | 22 +++++++
+ .../TEST-I09-20260908T211102758207Z/results.xml    |  1 +
+ .../TEST-I10-20260908T211214733077Z/metadata.json  | 35 +++++++++++
+ .../TEST-I10-20260908T211214733077Z/output.txt     | 26 ++++++++
+ .../TEST-I10-20260908T211214733077Z/results.xml    |  1 +
+ .../TEST-I11-20260908T211342964557Z/metadata.json  | 36 +++++++++++
+ .../TEST-I11-20260908T211342964557Z/output.txt     | 31 +++++++++
+ .../TEST-I11-20260908T211342964557Z/results.xml    |  1 +
+ .../TEST-I12-20260908T211512627796Z/metadata.json  | 37 +++++++++++
+ .../TEST-I12-20260908T211512627796Z/output.txt     | 20 ++++++
+ .../TEST-I12-20260908T211512627796Z/results.xml    |  1 +
+ .../TEST-I13-20260908T211637569849Z/metadata.json  | 38 +++++++++++
+ .../TEST-I13-20260908T211637569849Z/output.txt     | 13 ++++
+ .../TEST-I13-20260908T211637569849Z/results.xml    |  1 +
+ src/pitwall/comparison.py                          |  5 +-
+ src/pitwall/conditions.py                          | 53 ++++++++++++++++
+ src/pitwall/engine.py                              | 30 ++++++++-
+ src/pitwall/events.py                              | 50 +++++++++++++++
+ src/pitwall/monte_carlo.py                         | 73 ++++++++++++++++++++++
+ src/pitwall/optimiser.py                           | 70 +++++++++++++++++++++
+ tests/test_conditions.py                           | 41 ++++++++++++
+ tests/test_events.py                               | 26 ++++++++
+ tests/test_monte_carlo.py                          | 38 +++++++++++
+ tests/test_optimiser.py                            | 37 +++++++++++
+ tests/test_randomness.py                           | 29 +++++++++
+ 39 files changed, 910 insertions(+), 5 deletions(-)
+
+commit d6a542cdf4881e707d49bcdf66531167c79554ce
+Author:     mithil <mithil.katkoria@gmail.com>
+AuthorDate: Tue Sep 8 22:09:35 2026 +0100
+Commit:     mithil <mithil.katkoria@gmail.com>
+CommitDate: Tue Sep 8 22:09:35 2026 +0100
+
+    Complete and verify first deterministic desktop milestone
+
+ docs/design/I07-gui.md                             |  24 ++
+ docs/design/I08-events.md                          |  16 ++
+ docs/iterations/I06.md                             |   7 +
+ docs/iterations/I07.md                             |  13 +
+ .../FIG-I07-20260908T210757444690Z/application.png | Bin 0 -> 101826 bytes
+ .../FIG-I07-20260908T210757444690Z/capture.json    | 147 ++++++++++
+ .../TEST-I07-20260908T210702638724Z/metadata.json  |  28 ++
+ .../TEST-I07-20260908T210702638724Z/output.txt     |  59 ++++
+ .../TEST-I07-20260908T210702638724Z/results.xml    |   1 +
+ launch.ps1                                         |  10 +
+ main.py                                            |   8 +
+ scripts/capture_gui.py                             |  41 +++
+ src/pitwall/defaults.py                            |  10 +
+ src/pitwall/gui.py                                 | 305 +++++++++++++++++++++
+ tests/test_gui.py                                  |  56 ++++
+ 15 files changed, 725 insertions(+)
+
+commit eafc37e062234ee289962c720ac998bfaa62920e
+Author:     mithil <mithil.katkoria@gmail.com>
+AuthorDate: Tue Sep 8 22:03:22 2026 +0100
+Commit:     mithil <mithil.katkoria@gmail.com>
+CommitDate: Tue Sep 8 22:03:22 2026 +0100
+
+    Verify dry-race engine and strategy comparison
+
+ docs/design/I04-I05-engine.md                      | 37 +++++++++++++++
+ docs/design/I06-comparison.md                      | 18 +++++++
+ docs/iterations/I03.md                             |  7 +++
+ docs/iterations/I04-I05.md                         | 11 +++++
+ .../TEST-I05-20260908T210214046535Z/metadata.json  | 26 ++++++++++
+ .../TEST-I05-20260908T210214046535Z/output.txt     | 51 ++++++++++++++++++++
+ .../TEST-I05-20260908T210214046535Z/results.xml    |  1 +
+ .../TEST-I06-20260908T210320581715Z/metadata.json  | 25 ++++++++++
+ .../TEST-I06-20260908T210320581715Z/output.txt     | 55 ++++++++++++++++++++++
+ .../TEST-I06-20260908T210320581715Z/results.xml    |  1 +
+ src/pitwall/comparison.py                          | 29 ++++++++++++
+ src/pitwall/engine.py                              | 20 ++++++++
+ tests/test_comparison.py                           | 34 +++++++++++++
+ tests/test_engine.py                               | 53 +++++++++++++++++++++
+ 14 files changed, 368 insertions(+)
+
+commit 1fabfe3e22091b7713f29dc6d19b06303af73dc2
+Author:     mithil <mithil.katkoria@gmail.com>
+AuthorDate: Tue Sep 8 22:00:49 2026 +0100
+Commit:     mithil <mithil.katkoria@gmail.com>
+CommitDate: Tue Sep 8 22:00:49 2026 +0100
+
+    Test tyre degradation and deterministic lap formulas
+
+ docs/design/I02-tyres.md                           | 16 ++++++++
+ docs/design/I03-lap.md                             | 17 +++++++++
+ docs/iterations/I01.md                             | 13 +++++++
+ docs/iterations/I02.md                             |  7 ++++
+ .../TEST-I01-20260908T205847968425Z/metadata.json  | 20 ++++++++++
+ .../TEST-I01-20260908T205847968425Z/output.txt     | 30 +++++++++++++++
+ .../TEST-I01-20260908T205847968425Z/results.xml    |  1 +
+ .../TEST-I02-20260908T205945777891Z/metadata.json  | 23 ++++++++++++
+ .../TEST-I02-20260908T205945777891Z/output.txt     | 37 +++++++++++++++++++
+ .../TEST-I02-20260908T205945777891Z/results.xml    |  1 +
+ .../TEST-I03-20260908T210046769795Z/metadata.json  | 23 ++++++++++++
+ .../TEST-I03-20260908T210046769795Z/output.txt     | 43 ++++++++++++++++++++++
+ .../TEST-I03-20260908T210046769795Z/results.xml    |  1 +
+ src/pitwall/physics.py                             | 27 ++++++++++++++
+ tests/test_physics.py                              | 35 ++++++++++++++++++
+ 15 files changed, 294 insertions(+)
+
+commit 51e8e03c8ed1f1366d018ccde3b04b7498149528
+Author:     mithil <mithil.katkoria@gmail.com>
+AuthorDate: Tue Sep 8 21:58:03 2026 +0100
+Commit:     mithil <mithil.katkoria@gmail.com>
+CommitDate: Tue Sep 8 21:58:03 2026 +0100
+
+    Design and implement validated core models
+
+ .gitignore                    |   4 +
+ docs/analysis/requirements.md |  58 +++++++++++++
+ docs/assistance-log.md        |   5 ++
+ docs/design/architecture.md   |  79 ++++++++++++++++++
+ pytest.ini                    |   3 +
+ report/missing-evidence.md    |  12 +++
+ requirements.txt              |   3 +
+ scripts/run_tests.py          |  25 ++++++
+ src/pitwall/__init__.py       |   1 +
+ src/pitwall/models.py         | 184 ++++++++++++++++++++++++++++++++++++++++++
+ tests/conftest.py             |  11 +++
+ tests/test_models.py          |  67 +++++++++++++++
+ 12 files changed, 452 insertions(+)

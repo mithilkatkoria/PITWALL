@@ -216,6 +216,7 @@ class AdvancedWindow(MainWindow):
         if kind == "search":
             scores,refs = result
             best = scores[0]
+            self.headline.setText(f"Search complete | {len(scores):,} candidates | Best {best.total_time:,.3f} s")
             plan = best.strategy
             stops = ', '.join(f"{p.lap}:{p.compound.value}" for p in plan.planned_stops) or 'none'
             text = f"Examined {len(scores)} legal candidates.\nBest within this search: {best.total_time:.3f} s\nStart: {plan.starting_compound.value}; stops after lap: {stops}\nVariation disabled; fixed events retained.\n\nSeparate baseline references:\n"
@@ -227,11 +228,12 @@ class AdvancedWindow(MainWindow):
             payload = dict(candidate_count=len(scores),scores=[asdict(s) for s in scores],baselines=[asdict(s) for s in refs])
         else:
             a,b = scenario.strategies[:2]
+            self.headline.setText(f"Monte Carlo complete | {len(result.trials):,} paired trials")
             text = f"{len(result.trials)} paired trials\nA: {a.name}\nB: {b.name}\nP(A beats B): {result.a_win_probability:.1%}\nP(tie): {result.tie_probability:.1%}\nPopulation standard deviation shown.\n\n"
             for name,stats in ((a.name,result.a_statistics),(b.name,result.b_statistics)):
                 text += name + '\n' + '\n'.join(f"  {k}: {v:.3f} s" for k,v in stats.items()) + '\n'
-            for name,totals,colour in ((a.name,[t.a_total for t in result.trials],'#50e3b4'),(b.name,[t.b_total for t in result.trials],'#ffcc66')):
-                ax.hist(totals,bins=min(20,len(totals)),alpha=.55,label=name,color=colour)
+            ax.hist([[t.a_total for t in result.trials],[t.b_total for t in result.trials]],
+                    bins=min(20,len(result.trials)),alpha=.7,label=[a.name,b.name],color=['#50e3b4','#ffcc66'])
             ax.legend(facecolor='#182739',labelcolor='#e4edf7')
             ax.set_xlabel('Total race time (s)',color='#bbccdf')
             ax.set_ylabel('Trial count',color='#bbccdf')

@@ -1,0 +1,2 @@
+# Preserve exact bytes for source/evidence hashes across Windows checkouts.
+* -text

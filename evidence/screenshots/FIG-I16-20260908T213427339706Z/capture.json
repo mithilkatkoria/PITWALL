@@ -1,0 +1,16 @@
+{
+  "method": "QWidget.grab of actual AdvancedWindow, Windows Qt platform",
+  "platform": "windows",
+  "started_utc": "2026-09-08T21:34:27.346136+00:00",
+  "captures": [
+    "01-comparison.png",
+    "02-metrics.png",
+    "03-laps.png",
+    "04-controls.png",
+    "05-search-results.png",
+    "06-search-chart.png",
+    "07-monte-carlo-results.png",
+    "08-monte-carlo-chart.png"
+  ],
+  "limitation": "Automated capture, not human usability evidence"
+}

@@ -1,0 +1,704 @@
+{
+  "kind": "monte_carlo",
+  "completed_utc": "2026-09-08T21:30:11.128038+00:00",
+  "scenario": {
+    "schema_version": 1,
+    "config": {
+      "laps": 50,
+      "circuit": {
+        "name": "Custom circuit",
+        "base_lap_time": 90.0,
+        "pit_lane_loss": 20.0
+      },
+      "driver": {
+        "name": "Custom driver",
+        "pace_delta": 0.0
+      },
+      "tyres": [
+        {
+          "name": "Soft",
+          "base_pace_delta": 0.0,
+          "degradation_rate": 0.16,
+          "recommended_life": 15
+        },
+        {
+          "name": "Medium",
+          "base_pace_delta": 0.5,
+          "degradation_rate": 0.09,
+          "recommended_life": 25
+        },
+        {
+          "name": "Hard",
+          "base_pace_delta": 1.0,
+          "degradation_rate": 0.045,
+          "recommended_life": 35
+        }
+      ],
+      "initial_fuel_penalty": 3.0
+    },
+    "conditions": {
+      "initial_weather": "Dry",
+      "events": [],
+      "damp_penalty": 4.0,
+      "wet_penalty": 15.0,
+      "safety_car_penalty": 25.0,
+      "safety_car_pit_factor": 0.5,
+      "seed": 42,
+      "variation": 0.3
+    },
+    "strategies": [
+      {
+        "name": "One stop",
+        "starting_compound": "Medium",
+        "planned_stops": [
+          {
+            "lap": 25,
+            "compound": "Hard",
+            "stationary_time": 2.5
+          }
+        ]
+      },
+      {
+        "name": "Two stops",
+        "starting_compound": "Soft",
+        "planned_stops": [
+          {
+            "lap": 15,
+            "compound": "Medium",
+            "stationary_time": 2.5
+          },
+          {
+            "lap": 32,
+            "compound": "Hard",
+            "stationary_time": 2.5
+          }
+        ]
+      }
+    ]
+  },
+  "controls": {
+    "runs": 100,
+    "sc_probability": 0.3,
+    "sc_duration": 3
+  },
+  "result": {
+    "trials": [
+      {
+        "seed": 2746317213,
+        "safety_car_start": 18,
+        "a_total": 4751.592733460042,
+        "b_total": 4758.517733460043
+      },
+      {
+        "seed": 1051802512,
+        "safety_car_start": 7,
+        "a_total": 4752.211170196588,
+        "b_total": 4759.136170196587
+      },
+      {
+        "seed": 1812140441,
+        "safety_car_start": 14,
+        "a_total": 4749.062736174427,
+        "b_total": 4744.737736174427
+      },
+      {
+        "seed": 2585650756,
+        "safety_car_start": null,
+        "a_total": 4673.657390368016,
+        "b_total": 4680.582390368016
+      },
+      {
+        "seed": 1801823908,
+        "safety_car_start": null,
+        "a_total": 4674.412415364166,
+        "b_total": 4681.337415364167
+      },
+      {
+        "seed": 3733616459,
+        "safety_car_start": null,
+        "a_total": 4677.2650296835645,
+        "b_total": 4684.190029683563
+      },
+      {
+        "seed": 1815115025,
+        "safety_car_start": 14,
+        "a_total": 4750.508844658738,
+        "b_total": 4746.183844658738
+      },
+      {
+        "seed": 1445662585,
+        "safety_car_start": 7,
+        "a_total": 4750.12079434796,
+        "b_total": 4757.0457943479605
+      },
+      {
+        "seed": 3961228449,
+        "safety_car_start": 19,
+        "a_total": 4753.168175681455,
+        "b_total": 4760.0931756814525
+      },
+      {
+        "seed": 3701002945,
+        "safety_car_start": null,
+        "a_total": 4673.529076400783,
+        "b_total": 4680.454076400781
+      },
+      {
+        "seed": 3026113008,
+        "safety_car_start": 15,
+        "a_total": 4750.551277464339,
+        "b_total": 4746.2262774643405
+      },
+      {
+        "seed": 3320303242,
+        "safety_car_start": null,
+        "a_total": 4674.7325591977415,
+        "b_total": 4681.657559197742
+      },
+      {
+        "seed": 3673561638,
+        "safety_car_start": null,
+        "a_total": 4674.511752723965,
+        "b_total": 4681.436752723963
+      },
+      {
+        "seed": 1632629719,
+        "safety_car_start": null,
+        "a_total": 4675.4198312139415,
+        "b_total": 4682.344831213942
+      },
+      {
+        "seed": 3582477022,
+        "safety_car_start": 23,
+        "a_total": 4740.666962050371,
+        "b_total": 4758.84196205037
+      },
+      {
+        "seed": 2783290795,
+        "safety_car_start": null,
+        "a_total": 4674.222630104528,
+        "b_total": 4681.147630104528
+      },
+      {
+        "seed": 3131575764,
+        "safety_car_start": 25,
+        "a_total": 4742.463654582324,
+        "b_total": 4760.638654582325
+      },
+      {
+        "seed": 240251661,
+        "safety_car_start": null,
+        "a_total": 4677.449370861294,
+        "b_total": 4684.374370861294
+      },
+      {
+        "seed": 3457645390,
+        "safety_car_start": null,
+        "a_total": 4676.936960313615,
+        "b_total": 4683.861960313616
+      },
+      {
+        "seed": 284277889,
+        "safety_car_start": null,
+        "a_total": 4675.226601346727,
+        "b_total": 4682.151601346727
+      },
+      {
+        "seed": 3083418319,
+        "safety_car_start": 32,
+        "a_total": 4752.303408519958,
+        "b_total": 4747.978408519958
+      },
+      {
+        "seed": 1970753705,
+        "safety_car_start": 16,
+        "a_total": 4749.328551215194,
+        "b_total": 4756.253551215195
+      },
+      {
+        "seed": 2314889832,
+        "safety_car_start": null,
+        "a_total": 4675.507501658328,
+        "b_total": 4682.432501658325
+      },
+      {
+        "seed": 2506254832,
+        "safety_car_start": null,
+        "a_total": 4674.6372833545,
+        "b_total": 4681.562283354499
+      },
+      {
+        "seed": 2119634399,
+        "safety_car_start": null,
+        "a_total": 4675.85538772879,
+        "b_total": 4682.780387728793
+      },
+      {
+        "seed": 3698408854,
+        "safety_car_start": 11,
+        "a_total": 4751.318306334177,
+        "b_total": 4758.243306334175
+      },
+      {
+        "seed": 272849424,
+        "safety_car_start": null,
+        "a_total": 4676.238907687367,
+        "b_total": 4683.163907687366
+      },
+      {
+        "seed": 4278308761,
+        "safety_car_start": null,
+        "a_total": 4676.789964868685,
+        "b_total": 4683.7149648686855
+      },
+      {
+        "seed": 3095476665,
+        "safety_car_start": null,
+        "a_total": 4676.370240384513,
+        "b_total": 4683.295240384512
+      },
+      {
+        "seed": 2752909971,
+        "safety_car_start": 28,
+        "a_total": 4750.387343270817,
+        "b_total": 4757.312343270818
+      },
+      {
+        "seed": 679282378,
+        "safety_car_start": 47,
+        "a_total": 4751.03245326128,
+        "b_total": 4757.957453261279
+      },
+      {
+        "seed": 3919706735,
+        "safety_car_start": null,
+        "a_total": 4674.941588777711,
+        "b_total": 4681.866588777712
+      },
+      {
+        "seed": 2615507143,
+        "safety_car_start": 49,
+        "a_total": 4726.111409880095,
+        "b_total": 4733.036409880097
+      },
+      {
+        "seed": 3944899549,
+        "safety_car_start": null,
+        "a_total": 4676.5416429498755,
+        "b_total": 4683.466642949877
+      },
+      {
+        "seed": 2098545541,
+        "safety_car_start": 24,
+        "a_total": 4738.220046301934,
+        "b_total": 4756.395046301934
+      },
+      {
+        "seed": 1320763135,
+        "safety_car_start": 37,
+        "a_total": 4747.944395545212,
+        "b_total": 4754.869395545212
+      },
+      {
+        "seed": 4067116918,
+        "safety_car_start": 32,
+        "a_total": 4751.418147959923,
+        "b_total": 4747.093147959923
+      },
+      {
+        "seed": 3504793184,
+        "safety_car_start": null,
+        "a_total": 4673.060105031074,
+        "b_total": 4679.985105031074
+      },
+      {
+        "seed": 540137296,
+        "safety_car_start": null,
+        "a_total": 4673.0824311417255,
+        "b_total": 4680.007431141726
+      },
+      {
+        "seed": 709214891,
+        "safety_car_start": null,
+        "a_total": 4673.969357183571,
+        "b_total": 4680.894357183571
+      },
+      {
+        "seed": 2605301030,
+        "safety_car_start": null,
+        "a_total": 4673.225062753516,
+        "b_total": 4680.150062753517
+      },
+      {
+        "seed": 2962958940,
+        "safety_car_start": null,
+        "a_total": 4673.575893613889,
+        "b_total": 4680.50089361389
+      },
+      {
+        "seed": 1603828849,
+        "safety_car_start": null,
+        "a_total": 4676.723045280483,
+        "b_total": 4683.648045280485
+      },
+      {
+        "seed": 1939118223,
+        "safety_car_start": 5,
+        "a_total": 4749.38294609285,
+        "b_total": 4756.307946092852
+      },
+      {
+        "seed": 1452066459,
+        "safety_car_start": null,
+        "a_total": 4673.584538408543,
+        "b_total": 4680.509538408541
+      },
+      {
+        "seed": 945826486,
+        "safety_car_start": 41,
+        "a_total": 4750.495655889805,
+        "b_total": 4757.420655889807
+      },
+      {
+        "seed": 252860896,
+        "safety_car_start": 3,
+        "a_total": 4750.166404737434,
+        "b_total": 4757.091404737436
+      },
+      {
+        "seed": 3692105921,
+        "safety_car_start": 16,
+        "a_total": 4750.556325964528,
+        "b_total": 4757.481325964528
+      },
+      {
+        "seed": 2084839399,
+        "safety_car_start": null,
+        "a_total": 4675.565203095358,
+        "b_total": 4682.490203095358
+      },
+      {
+        "seed": 2474810179,
+        "safety_car_start": 31,
+        "a_total": 4750.363676613147,
+        "b_total": 4746.038676613148
+      },
+      {
+        "seed": 3468173213,
+        "safety_car_start": 7,
+        "a_total": 4752.0159672270065,
+        "b_total": 4758.940967227006
+      },
+      {
+        "seed": 2830309370,
+        "safety_car_start": null,
+        "a_total": 4675.127492107724,
+        "b_total": 4682.052492107724
+      },
+      {
+        "seed": 1765670844,
+        "safety_car_start": null,
+        "a_total": 4675.3782337186585,
+        "b_total": 4682.303233718657
+      },
+      {
+        "seed": 2775320897,
+        "safety_car_start": 47,
+        "a_total": 4748.985219214822,
+        "b_total": 4755.910219214821
+      },
+      {
+        "seed": 3700855390,
+        "safety_car_start": 13,
+        "a_total": 4750.168922520165,
+        "b_total": 4745.843922520165
+      },
+      {
+        "seed": 2303329764,
+        "safety_car_start": 12,
+        "a_total": 4748.338465828342,
+        "b_total": 4755.263465828344
+      },
+      {
+        "seed": 1196342297,
+        "safety_car_start": 5,
+        "a_total": 4752.596453071626,
+        "b_total": 4759.521453071626
+      },
+      {
+        "seed": 2363629219,
+        "safety_car_start": 35,
+        "a_total": 4751.300619032875,
+        "b_total": 4758.225619032873
+      },
+      {
+        "seed": 3590711152,
+        "safety_car_start": null,
+        "a_total": 4674.931405582983,
+        "b_total": 4681.856405582985
+      },
+      {
+        "seed": 3645120421,
+        "safety_car_start": 32,
+        "a_total": 4751.662559294981,
+        "b_total": 4747.337559294981
+      },
+      {
+        "seed": 2067418686,
+        "safety_car_start": null,
+        "a_total": 4675.758043331895,
+        "b_total": 4682.683043331897
+      },
+      {
+        "seed": 3875962612,
+        "safety_car_start": 1,
+        "a_total": 4750.703963404945,
+        "b_total": 4757.628963404946
+      },
+      {
+        "seed": 4231869256,
+        "safety_car_start": 30,
+        "a_total": 4750.468286396837,
+        "b_total": 4746.143286396837
+      },
+      {
+        "seed": 1225136114,
+        "safety_car_start": null,
+        "a_total": 4676.41617179488,
+        "b_total": 4683.341171794881
+      },
+      {
+        "seed": 2090237817,
+        "safety_car_start": 14,
+        "a_total": 4749.295214580421,
+        "b_total": 4744.970214580419
+      },
+      {
+        "seed": 4160575046,
+        "safety_car_start": null,
+        "a_total": 4677.912317985751,
+        "b_total": 4684.83731798575
+      },
+      {
+        "seed": 2328710672,
+        "safety_car_start": null,
+        "a_total": 4673.864690011537,
+        "b_total": 4680.789690011538
+      },
+      {
+        "seed": 245522987,
+        "safety_car_start": null,
+        "a_total": 4675.799222067863,
+        "b_total": 4682.724222067863
+      },
+      {
+        "seed": 676168421,
+        "safety_car_start": null,
+        "a_total": 4675.130037667843,
+        "b_total": 4682.055037667844
+      },
+      {
+        "seed": 798112150,
+        "safety_car_start": null,
+        "a_total": 4676.359252728066,
+        "b_total": 4683.284252728065
+      },
+      {
+        "seed": 1010193046,
+        "safety_car_start": 37,
+        "a_total": 4749.251098921217,
+        "b_total": 4756.176098921216
+      },
+      {
+        "seed": 2553440342,
+        "safety_car_start": null,
+        "a_total": 4677.035683845665,
+        "b_total": 4683.960683845666
+      },
+      {
+        "seed": 2245334677,
+        "safety_car_start": null,
+        "a_total": 4674.240246351004,
+        "b_total": 4681.165246351003
+      },
+      {
+        "seed": 3076020365,
+        "safety_car_start": 26,
+        "a_total": 4750.431445085689,
+        "b_total": 4757.35644508569
+      },
+      {
+        "seed": 2772404776,
+        "safety_car_start": null,
+        "a_total": 4672.764106045468,
+        "b_total": 4679.689106045467
+      },
+      {
+        "seed": 4018948187,
+        "safety_car_start": 40,
+        "a_total": 4749.673620523161,
+        "b_total": 4756.598620523158
+      },
+      {
+        "seed": 4278201677,
+        "safety_car_start": 14,
+        "a_total": 4748.918797021879,
+        "b_total": 4744.593797021878
+      },
+      {
+        "seed": 2172758220,
+        "safety_car_start": 23,
+        "a_total": 4738.999590352379,
+        "b_total": 4757.17459035238
+      },
+      {
+        "seed": 3783282817,
+        "safety_car_start": null,
+        "a_total": 4677.904220606454,
+        "b_total": 4684.8292206064525
+      },
+      {
+        "seed": 1587106770,
+        "safety_car_start": 35,
+        "a_total": 4752.860240321817,
+        "b_total": 4759.785240321819
+      },
+      {
+        "seed": 3021680963,
+        "safety_car_start": null,
+        "a_total": 4674.902273210248,
+        "b_total": 4681.827273210246
+      },
+      {
+        "seed": 2849232839,
+        "safety_car_start": null,
+        "a_total": 4677.077480664983,
+        "b_total": 4684.002480664982
+      },
+      {
+        "seed": 576775951,
+        "safety_car_start": 7,
+        "a_total": 4750.35446859137,
+        "b_total": 4757.27946859137
+      },
+      {
+        "seed": 667643690,
+        "safety_car_start": 14,
+        "a_total": 4752.510317736293,
+        "b_total": 4748.185317736293
+      },
+      {
+        "seed": 3082120871,
+        "safety_car_start": 41,
+        "a_total": 4749.537984941116,
+        "b_total": 4756.462984941116
+      },
+      {
+        "seed": 3663232650,
+        "safety_car_start": null,
+        "a_total": 4675.1392411050365,
+        "b_total": 4682.064241105036
+      },
+      {
+        "seed": 218179599,
+        "safety_car_start": null,
+        "a_total": 4673.714792385021,
+        "b_total": 4680.639792385022
+      },
+      {
+        "seed": 3562022940,
+        "safety_car_start": 22,
+        "a_total": 4750.7151423304185,
+        "b_total": 4757.64014233042
+      },
+      {
+        "seed": 3311931853,
+        "safety_car_start": null,
+        "a_total": 4675.267886656442,
+        "b_total": 4682.192886656443
+      },
+      {
+        "seed": 1125089309,
+        "safety_car_start": null,
+        "a_total": 4676.647477343987,
+        "b_total": 4683.572477343987
+      },
+      {
+        "seed": 41531046,
+        "safety_car_start": 45,
+        "a_total": 4750.599370043595,
+        "b_total": 4757.524370043595
+      },
+      {
+        "seed": 3882343658,
+        "safety_car_start": null,
+        "a_total": 4673.754057445181,
+        "b_total": 4680.679057445182
+      },
+      {
+        "seed": 3584558315,
+        "safety_car_start": null,
+        "a_total": 4673.886772875893,
+        "b_total": 4680.811772875892
+      },
+      {
+        "seed": 636057975,
+        "safety_car_start": 20,
+        "a_total": 4750.946486126904,
+        "b_total": 4757.871486126905
+      },
+      {
+        "seed": 1536778950,
+        "safety_car_start": null,
+        "a_total": 4675.990793502125,
+        "b_total": 4682.915793502122
+      },
+      {
+        "seed": 2864457210,
+        "safety_car_start": null,
+        "a_total": 4676.955408208792,
+        "b_total": 4683.880408208791
+      },
+      {
+        "seed": 3756862531,
+        "safety_car_start": null,
+        "a_total": 4676.300275661369,
+        "b_total": 4683.225275661368
+      },
+      {
+        "seed": 3218981849,
+        "safety_car_start": null,
+        "a_total": 4674.731985032125,
+        "b_total": 4681.656985032125
+      },
+      {
+        "seed": 1770791023,
+        "safety_car_start": 22,
+        "a_total": 4749.1575660124845,
+        "b_total": 4756.082566012485
+      },
+      {
+        "seed": 1065870178,
+        "safety_car_start": 45,
+        "a_total": 4752.888726407593,
+        "b_total": 4759.813726407596
+      }
+    ],
+    "a_statistics": {
+      "mean": 4710.017772846238,
+      "median": 4677.357200272429,
+      "stdev": 37.03673216529367,
+      "minimum": 4672.764106045468,
+      "maximum": 4753.168175681455
+    },
+    "b_statistics": {
+      "mean": 4716.042772846238,
+      "median": 4684.282200272428,
+      "stdev": 36.175172219144535,
+      "minimum": 4679.689106045467,
+      "maximum": 4760.638654582325
+    },
+    "a_win_probability": 0.88,
+    "tie_probability": 0.0
+  }
+}

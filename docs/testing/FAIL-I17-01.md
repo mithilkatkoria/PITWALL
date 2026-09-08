@@ -9,3 +9,5 @@ Root cause: exact dictionary field checks validated each element but did not val
 Options: (1) explicit JSON-array guard at each collection boundary; (2) introduce a schema-validation dependency; (3) accept any iterable. Selected1 because the schema is small, keeps dependencies minimal and rejects data outside the documented contract. Option3 would preserve the bug's ambiguity.
 
 Planned remedy: helper requiring list with explicit name, used for tyres,events,strategies,planned_stops. Planned retest: unchanged failing cases plus complete regression. Design impact: make collection validation explicit before element validation. Retest results will be added after execution.
+
+Executed remedy and retest: added `array()` before all four collection loops. TEST-I17-RETEST executed with84 passed, including both unchanged reproduction cases. Evidence: `evidence/test-runs/TEST-I17-RETEST-20260908T212641586436Z/`. Original failed output remains unchanged. Full regression did not show additional failures.

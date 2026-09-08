@@ -62,3 +62,21 @@ def test_async_search_and_mc(advanced,config):
     advanced.start_experiment('monte_carlo')
     wait_for_job(advanced)
     assert len(advanced.experiment_data['result']['trials']) == 100
+
+
+def test_stale_worker_result_discarded(advanced,config):
+    advanced.apply_scenario(Scenario(config,Conditions(),(Strategy('A',Compound.SOFT),Strategy('B',Compound.HARD))))
+    advanced.start_experiment('monte_carlo')
+    advanced.base.setValue(91)
+    wait_for_job(advanced)
+    assert advanced.experiment_data is None
+    assert 'older inputs' in advanced.status.text()
+
+
+def test_worker_cancellation(advanced):
+    advanced.runs.setCurrentText('1000')
+    advanced.start_experiment('monte_carlo')
+    advanced.cancel_run()
+    wait_for_job(advanced)
+    assert advanced.experiment_data is None
+    assert 'cancelled' in advanced.status.text().lower()

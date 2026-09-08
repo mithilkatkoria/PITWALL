@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "config": {
+    "laps": 50,
+    "circuit": {
+      "name": "Custom circuit",
+      "base_lap_time": 90.0,
+      "pit_lane_loss": 20.0
+    },
+    "driver": {
+      "name": "Custom driver",
+      "pace_delta": 0.0
+    },
+    "tyres": [
+      {
+        "name": "Soft",
+        "base_pace_delta": 0.0,
+        "degradation_rate": 0.16,
+        "recommended_life": 15
+      },
+      {
+        "name": "Medium",
+        "base_pace_delta": 0.5,
+        "degradation_rate": 0.09,
+        "recommended_life": 25
+      },
+      {
+        "name": "Hard",
+        "base_pace_delta": 1.0,
+        "degradation_rate": 0.045,
+        "recommended_life": 35
+      }
+    ],
+    "initial_fuel_penalty": 3.0
+  },
+  "conditions": {
+    "initial_weather": "Dry",
+    "events": [],
+    "damp_penalty": 4.0,
+    "wet_penalty": 15.0,
+    "safety_car_penalty": 25.0,
+    "safety_car_pit_factor": 0.5,
+    "seed": 42,
+    "variation": 0.0
+  },
+  "strategies": [
+    {
+      "name": "One stop",
+      "starting_compound": "Medium",
+      "planned_stops": [
+        {
+          "lap": 25,
+          "compound": "Hard",
+          "stationary_time": 2.5
+        }
+      ]
+    },
+    {
+      "name": "Two stops",
+      "starting_compound": "Soft",
+      "planned_stops": [
+        {
+          "lap": 15,
+          "compound": "Medium",
+          "stationary_time": 2.5
+        },
+        {
+          "lap": 32,
+          "compound": "Hard",
+          "stationary_time": 2.5
+        }
+      ]
+    }
+  ]
+}
