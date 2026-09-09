@@ -1,9 +1,14 @@
-# Factual assistance log
+# Assistance log
 
-2026-09-08: User supplied the PITWALL brief. Codex read it and inspected the workspace. Codex is authoring provisional analysis, designs, implementation, tests and evidence records. This is AI-assisted work, not evidence of unaided candidate authorship. Candidate understanding and review are pending. Centre assistance/declaration guidance has not been supplied. The candidate should review and explain each accepted part and follow their centre's declaration requirements.
+Tool used: Codex. Centre-specific declaration guidance is pending. No assistance percentage is assigned.
 
-No stakeholder answers, teacher comments, historical dates, failed tests or screenshots are fabricated. Test and program output will be recorded only when executed.
+| Date / stage | Assistance provided | Affected files / features | Candidate follow-up recorded |
+|---|---|---|---|
+| 2026-09-08, planning and records | Drafted requirements, designs, diagrams, development records, README and evaluation; reviewed three sources after the prototype | `docs/`, `README.md`, `report/` | Candidate supplied brief; subsequent review not recorded |
+| 2026-09-08, implementation | Authored simulation, comparison, GUI, environmental events, randomness, Monte Carlo, search and persistence modules | `src/pitwall/`, `main.py`, `launch.ps1` | Personal changes or explanation not recorded |
+| 2026-09-08, verification | Wrote/ran tests; fixed JSON validation and capture-harness issues; captured/inspected actual GUI output and ran benchmarks | `tests/`, `scripts/`, `evidence/` | Personal testing or review not recorded |
+| 2026-09-08, cleanup | Reorganised public documentation and consolidated attribution | Files in `report/documentation-cleanup.md` | Candidate requested cleanup; review of edits not recorded |
+| 2026-09-08, master report | Assembled and checked the evidence-based DOCX/PDF, diagrams and completeness audit | `report/`; SC05 evidence judgement in `docs/evaluation/review.md` | Candidate requested report; personal review and missing human evidence remain pending |
+| 2026-09-08, final quality pass | Added explicit tolerance verification and comparison benchmark; prepared blank human forms, final report and local release files | `tests/test_sc05_tolerance.py`, `scripts/benchmark_comparison.py`, `docs/`, `report/`, public packaging | Candidate requested quality pass; personal explanations, human sessions and centre approval remain pending |
 
-2026-09-08 continued: Codex authored and executed iterative model, physics, engine, comparison, GUI, event, weather, safety-car, randomness, Monte Carlo, optimiser and persistence work. Codex created automated tests and preserved real stdout/JSON/XML, including an actual JSON-container validation failure before fixing it. Codex created and corrected a real Qt capture harness, took actual widget captures, inspected them and ran machine-specific benchmarks. Codex reviewed three genuine existing-system sources after the prototype and explicitly recorded that research timing. No external system's source code or parameter values were copied. Source reviews do not represent hands-on use.
-
-Codex wrote the README, design diagrams, provisional evaluation, traceability and evidence indexes. All candidate reflections, stakeholder feedback, teacher approval and final assessment judgements remain pending. Git commits were made at actual execution times in a separate PITWALL repository; no historical dates were manufactured. This assistance record should be considered alongside the actual task conversation and local history when following the centre's requirements.
+Source review involved no hands-on trials or copied source code/parameters. Execution records, captures and Git history remain intact. Add personal review, changes, tests and explanations when completed.

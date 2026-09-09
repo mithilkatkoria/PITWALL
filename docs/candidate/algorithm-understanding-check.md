@@ -1,0 +1,243 @@
+# Algorithm understanding check
+
+Status: CANDIDATE INPUT REQUIRED. Every item is incomplete until Mithil records a genuine explanation and date. Source paths below are relative to src/pitwall/.
+
+## Tyre degradation
+
+Source: physics.py: degradation
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Fuel model
+
+Source: physics.py: fuel_effect
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Pit-stop semantics
+
+Source: engine.py: simulate
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Race loop
+
+Source: engine.py: simulate
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Event heap
+
+Source: events.py: EventQueue
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Weather state
+
+Source: conditions.py; engine.py
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Safety-car model
+
+Source: conditions.py; engine.py
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Random seed
+
+Source: engine.py; conditions.py
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Monte Carlo
+
+Source: monte_carlo.py
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Statistics
+
+Source: monte_carlo.py: describe
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Bounded candidate generation
+
+Source: optimiser.py: candidates
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Optimisation
+
+Source: optimiser.py: optimise
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Persistence
+
+Source: persistence.py
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## GUI worker and cancellation
+
+Source: advanced_gui.py
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]
+
+## Validation
+
+Source: models.py; persistence.py; gui.py
+Review date: [PENDING]
+Status: INCOMPLETE
+
+- What it does: [CANDIDATE EXPLANATION REQUIRED]
+- Why it exists: [CANDIDATE EXPLANATION REQUIRED]
+- Inputs: [CANDIDATE EXPLANATION REQUIRED]
+- Outputs: [CANDIDATE EXPLANATION REQUIRED]
+- Algorithm steps: [CANDIDATE EXPLANATION REQUIRED]
+- Data structure: [CANDIDATE EXPLANATION REQUIRED]
+- Edge case and expected result: [CANDIDATE EXPLANATION REQUIRED]
+- Alternative: [CANDIDATE EXPLANATION REQUIRED]
+- One limitation: [CANDIDATE EXPLANATION REQUIRED]

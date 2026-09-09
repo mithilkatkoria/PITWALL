@@ -1,0 +1,17 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\mithi\AppData\Local\Temp\pitwall-0460-venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL
+configfile: pytest.ini
+collecting ... collected 1 item
+
+tests/test_sc05_tolerance.py::test_five_lap_oracle_absolute_tolerance lap=1 actual=92 expected=92 absolute_error=0 cumulative_error=0
+lap=2 actual=114.2 expected=114.2 absolute_error=0 cumulative_error=0
+lap=3 actual=92 expected=92 absolute_error=0 cumulative_error=0
+lap=4 actual=91.549999999999997 expected=91.549999999999997 absolute_error=0 cumulative_error=0
+lap=5 actual=91.099999999999994 expected=91.099999999999994 absolute_error=0 cumulative_error=0
+SC05 absolute tolerance=1.0000000000000001e-09 s; maximum error=0 s
+PASSED
+
+- generated xml file: C:\Users\mithi\OneDrive - vmkaccountants1\Mithil Katkoria\mybriefcase\codex new projects\CS NEA\PITWALL\evidence\test-runs\TEST-SC05-20260908T224145702053Z\results.xml -
+============================== 1 passed in 0.16s ==============================

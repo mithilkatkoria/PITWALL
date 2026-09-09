@@ -2,7 +2,7 @@
 
 Mithil Katkoria | Candidate0460 | Centre12709 | H446-03.
 
-This is an organised technical/evidence pack, not a candidate-authored final assessed report. Read [assistance log](../docs/assistance-log.md), [criteria audit](mark-audit.md) and [missing evidence](missing-evidence.md) before relying on it.
+This pack brings together PITWALL's technical documentation and development evidence. Assessment records include the [assistance log](../docs/assistance-log.md), [criteria audit](mark-audit.md) and [missing-evidence record](missing-evidence.md). The final assessed report remains to be prepared and reviewed.
 
 - [Analysis and provisional requirements](../docs/analysis/requirements.md), [advanced success criteria](../docs/analysis/advanced-success-criteria.md), [three-system research](../docs/analysis/research.md).
 - [Initial architecture and core data dictionary](../docs/design/architecture.md), [implemented class/sequence diagrams](../docs/design/implemented-structure.md).

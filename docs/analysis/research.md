@@ -1,6 +1,6 @@
 # Existing solutions: source-based review
 
-Research performed by Codex on2026-09-08 after the implemented prototype. This timing is explicit: these sources did not cause the initial design, which came from the user's brief. Findings below inform maintenance and the research-led review exercises added now. No software was downloaded or personally trialled for this review. Weaknesses refer to suitability for PITWALL's educational purpose and are identified as judgements, not measured defects.
+Source review recorded on 2026-09-08 after the implemented prototype. This timing is explicit: these sources did not cause the initial design, which came from the user's brief. Findings below inform maintenance and the research-led review exercises added now. No software was downloaded or personally trialled for this review. Weaknesses refer to suitability for PITWALL's educational purpose and are identified as judgements, not measured defects.
 
 ## R01: TUM race-simulation
 

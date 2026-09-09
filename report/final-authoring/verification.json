@@ -1,0 +1,12 @@
+{
+  "pages": 68,
+  "figures": 10,
+  "tables": 39,
+  "test_cases": 87,
+  "recorded_runs": 19,
+  "original_protected_files_unchanged": 112,
+  "git_head": "ecf38296c5972ad4579848f2f42eb170709471de",
+  "assistance_log_exists": true,
+  "pdf_sha256": "95584b9eacf256746d16d35a578e0e1ab57c21a2235d9f2fd86b3356f0be2439",
+  "docx_sha256": "661c721c119292dccfbf8bab155021b44054fed9086fcd95c103d4668c0fd81c"
+}

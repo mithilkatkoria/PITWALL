@@ -1,33 +1,32 @@
-# Provisional OCR/centre criteria audit
+# OCR criterion mapping
 
-Source is the checklist transcribed in the user's supplied brief, not a separately received Full Mark Criteria document. No marks or full compliance are asserted. EVIDENCED means an artefact exists for that aspect; it does not mean a teacher has accepted its quality or authorship.
+Official OCR H446 specification downloaded 8 September 2026: https://www.ocr.org.uk/Images/170844-specification-accredited-a-level-gce-computer-science-h446.pdf . Content pages 13-14 (PDF 19-20) and marking grids 22-25 (PDF 28-31) were checked. The downloaded document has version 3.0/2026 content headers and retained 2.6/2023 grid headers. The separate centre Full Mark Criteria document was not located. This audit cannot claim integration of unseen centre additions.
 
-| Criterion | Current evidence | Evidence file | Status and outstanding review |
-|---|---|---|---|
-|3.1.1.a problem/justification|Strategy trade-offs and computational problem|docs/analysis/requirements.md|NEEDS REVIEW: candidate justification|
-|3.1.1.b computational methods|Abstraction,decomposition,iteration,selection,visualisation|docs/analysis/requirements.md|NEEDS REVIEW: candidate explanation|
-|3.1.2 stakeholders|Categories and questions; no responses|docs/testing/manual-usability.md|PLANNED: genuine stakeholder work required|
-|3.1.3.a three systems|Three cited reviews with decisions and honest research timing|docs/analysis/research.md|NEEDS REVIEW: candidate depth and centre expectations|
-|3.1.3.b essential features|FR01..FR12 table|docs/analysis/requirements.md|EVIDENCED: provisional brief source|
-|3.1.3.c limitations|Initial and implemented limitations|docs/evaluation/review.md|EVIDENCED: review with stakeholders|
-|3.1.4.a hardware/software|Runtime instructions,justifications,actual benchmark machine|README.md; evidence/benchmarks/BENCH-01-20260908T212651988284Z/timings.json|NEEDS REVIEW: target-user hardware untested|
-|3.1.4.b success criteria|SC01..SC14 measurable conditions|docs/analysis/requirements.md; docs/analysis/advanced-success-criteria.md|NEEDS REVIEW: stakeholder approval|
-|3.2.1 problem decomposition|Problem before solution components|docs/design/architecture.md|EVIDENCED|
-|3.2.2.a solution structure|Planned and actual diagrams|docs/design/implemented-structure.md|EVIDENCED|
-|3.2.2.b algorithms|A01..A14 distributed across dated iteration designs|docs/design/architecture.md; docs/design/I13-optimiser.md; report/master-evidence-pack.md|NEEDS REVIEW: candidate defence and diagram detail|
-|3.2.2.c usability design|Labels,validation,stale-state clearing,worker model|docs/design/I07-gui.md; docs/design/I14-I16-interface.md|EVIDENCED design; human review pending|
-|3.2.2.d variables/data/classes/validation|Typed models,units,class table,schema and validation|src/pitwall/models.py; docs/design/architecture.md|EVIDENCED|
-|3.2.3.a iterative test data|Typical/boundary/erroneous plans before each stage|docs/design/; tests/|EVIDENCED; candidate rationale review|
-|3.2.3.b post-development plan|Independent robustness/performance and separate usability protocol|docs/design/I17-verification.md; docs/testing/manual-usability.md|EVIDENCED plan|
-|3.3 development: iterative coded stages|Chronological designs,code,tests and genuine Git commits|docs/iterations/; src/pitwall/|EVIDENCED; AI assistance declared|
-|3.3 development: modularity/naming/annotations|Pure modules,typed immutable inputs,comments and diagrams|src/pitwall/; docs/design/implemented-structure.md|NEEDS REVIEW: candidate understanding|
-|3.3 development: prototypes/validation|First deterministic milestone and later integration|evidence/screenshots/FIG-I07-20260908T210757444690Z/; docs/iterations/I07.md|EVIDENCED|
-|3.3 testing to inform development|Actual iterative pytest runs|evidence/test-runs/|TESTED and EVIDENCED|
-|3.3 failed tests/remedial action|Two real failed assertions,fixed and rerun|docs/testing/FAIL-I17-01.md|EVIDENCED; no manufactured failures|
-|3.4.1 post-development testing|Independent robustness checks,full regression,benchmark|tests/test_final_robustness.py; docs/iterations/I17.md|NEEDS REVIEW: genuine usability tests missing|
-|3.4.2 success of solution|Provisional criterion judgements with references|docs/evaluation/review.md|NEEDS REVIEW: candidate evaluation|
-|3.4.3 usability features|Real captures and automated checks|evidence/screenshots/FIG-I16-20260908T213427339706Z/|NEEDS REVIEW: audience success not established|
-|3.4.4 maintenance/limitations|Six maintenance issues,eight limitations with consequences|docs/evaluation/review.md|NEEDS REVIEW: candidate technical judgement|
-|3.4.4.b improvements|Technical changes tied to actual architecture|docs/evaluation/review.md|NEEDS REVIEW: priorities from genuine feedback|
+See FINAL_CRITERIA_AUDIT.md for strengths, risks, actions and responsibility. Earlier separate 3.2.3(b) was a brief subdivision; official 3.2.3(a) covers both test phases. Official 3.3.1 and 3.3.2 numbering is now integrated.
 
-The brief gives15 development and10 testing marks but no full3.3 subcriterion numbering; do not invent exact codes. Update this audit against the actual centre document when received. The final assessed submission is not generated automatically from this audit.
+| Criterion | Document section | Evidence used | Status | Remaining work |
+|---|---|---|---|---|
+| 3.1.1(a) Computational problem | 1.1-1.3 | Requirements and model explanation | STRONG | Explain repeated scenario evaluation and parameter trade-offs |
+| 3.1.1(b) Computational approach | 1.3 | Decomposition, state and iteration | STRONG | Complete understanding check |
+| 3.1.2(a) Stakeholders | 1.4; 5.8 | Relevant groups and blank interviews | HUMAN INPUT REQUIRED | Conduct interview and requirements follow-up |
+| 3.1.3(a) Research | 1.5 | Three cited post-prototype reviews | PARTIAL | Candidate review; use future findings prospectively |
+| 3.1.3(b) Essential features | 1.7 | FR01-FR12 with rationale | STRONG | Confirm requirements with stakeholder |
+| 3.1.3(c) Limitations | 1.8; 5.10 | Model and deployment limits | STRONG | Discuss real user consequences |
+| 3.1.4(a) Requirements | 1.9 | Runtime, hardware and benchmark environment | STRONG | Validate on intended user machine |
+| 3.1.4(b) Success criteria | 1.10; 5.2 | SC01-SC14 and explicit evidence | STRONG | Confirm success criteria with stakeholder |
+| 3.2.1(a) Decomposition | 2.1 | Problem and component breakdown | STRONG | Explain boundaries and state |
+| 3.2.2(a) Structure | 2.2-2.3 | Current-source architecture and models | PARTIAL | Preserve labels; prospective design only after feedback |
+| 3.2.2(b) Algorithms | 2.6 | A01-A14 and source extracts | STRONG | Complete all 15 understanding topics |
+| 3.2.2(c) Usability design | 2.8-2.9 | GUI captures, labels, validation and worker design | PARTIAL | Run task sheet and act on actual findings |
+| 3.2.2(d) Data and validation | 2.3-2.5; 2.7 | Typed models, variables, strict schema | STRONG | Explain edge cases and alternatives |
+| 3.2.3(a) Test data | 2.10-2.11; 4 | Recorded stage plans and final quality plan | STRONG | Complete planned human tasks |
+| 3.3.1(a) Iterative process | 3.1-3.15; App G | Recorded stages, source, seven commits | CANDIDATE INPUT REQUIRED | Complete dated factual reflections |
+| 3.3.1(b) Prototypes | 3.6; 3.14 | First and advanced genuine GUI captures | STRONG | Explain preserved versions; do not fabricate missing captures |
+| 3.3.2(a) Development tests | 3.17; App B | 17 original runs plus two new runs | STRONG | Explain meaningful expected results |
+| 3.3.2(b) Remedial action | 3.16 | I17 JSON failure, remedy, retest and regression | STRONG | Explain empty-container cause and remedy |
+| 3.4.1(a) Final robustness | 4.1-4.4 | 87 passing cases and genuine timings | STRONG | Review coverage limits |
+| 3.4.1(b) Usability tests | 4.5 | Blank 14-task protocol | HUMAN INPUT REQUIRED | Run sessions and preserve observations |
+| 3.4.2(a) Success evaluation | 5.2 | Criterion evidence and explicit judgements | PARTIAL | Update after real sessions |
+| 3.4.3(a) Usability effectiveness | 5.7-5.8 | Real captures and automated GUI tests | HUMAN INPUT REQUIRED | Evaluate observed task outcomes |
+| 3.4.4(a) Maintenance | 5.9 | Six concrete module/change concerns | STRONG | Explain consequences and regression needs |
+| 3.4.4(b) Further development | 5.10-5.11 | Eight limitations and possible changes | STRONG | Choose one only after actual feedback |

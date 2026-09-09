@@ -1,0 +1,83 @@
+{
+  "evidence_id": "BENCH-COMPARE-20260908T224158666794Z",
+  "started_utc": "20260908T224158666794Z",
+  "command": [
+    "C:\\Users\\mithi\\AppData\\Local\\Temp\\pitwall-0460-venv\\Scripts\\python.exe",
+    "scripts/benchmark_comparison.py"
+  ],
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "process_architecture": "AMD64",
+  "scope": "compare() including simulation and ranking, excluding GUI rendering and input construction",
+  "warmup": "One comparison for each input size before its five measured runs",
+  "repeats": 5,
+  "measurements": [
+    {
+      "strategies": 2,
+      "race_laps": 50,
+      "lap_evaluations": 100,
+      "inputs": "Default tyre/circuit/fuel parameters; rotating dry start compounds; one Hard stop after halfway; no events or random variation",
+      "seconds": [
+        0.0015611999988323078,
+        0.0010181999969063327,
+        0.0010214000030828174,
+        0.0010029999975813553,
+        0.000999199997750111
+      ],
+      "minimum": 0.000999199997750111,
+      "maximum": 0.0015611999988323078,
+      "mean": 0.0011205999988305848,
+      "median": 0.0010181999969063327
+    },
+    {
+      "strategies": 20,
+      "race_laps": 50,
+      "lap_evaluations": 1000,
+      "inputs": "Default tyre/circuit/fuel parameters; rotating dry start compounds; one Hard stop after halfway; no events or random variation",
+      "seconds": [
+        0.010145799999008887,
+        0.0113521999992372,
+        0.010986400000547292,
+        0.011495799997646827,
+        0.014767600001505343
+      ],
+      "minimum": 0.010145799999008887,
+      "maximum": 0.014767600001505343,
+      "mean": 0.011749559999589109,
+      "median": 0.0113521999992372
+    },
+    {
+      "strategies": 20,
+      "race_laps": 500,
+      "lap_evaluations": 10000,
+      "inputs": "Default tyre/circuit/fuel parameters; rotating dry start compounds; one Hard stop after halfway; no events or random variation",
+      "seconds": [
+        0.15729019999707816,
+        0.1790478000002622,
+        0.15304570000080275,
+        0.15566609999950742,
+        0.16134249999959138
+      ],
+      "minimum": 0.15304570000080275,
+      "maximum": 0.1790478000002622,
+      "mean": 0.1612784599994484,
+      "median": 0.15729019999707816
+    }
+  ],
+  "source_sha256": {
+    "src/pitwall/__init__.py": "6728d184e812d376bc97902d17ce3310459aef4bceac112d5edefde9b06dd5db",
+    "src/pitwall/advanced_gui.py": "93b8796df765522f76bb4e0005596c824206b960da2931233a1b15c9c73c3d48",
+    "src/pitwall/comparison.py": "4b95e603769f55b26bd9cc5c0cd099087b3046352cad2b49c82068de5019a5a8",
+    "src/pitwall/conditions.py": "913e8866b95e4270344646881e4f2f55499dba2f4f0e8d4f39ba813e0d25ff1d",
+    "src/pitwall/defaults.py": "50782823d7c138509342b3e0f178960029e9aea1abf72b338ab3e6cfcab42fd0",
+    "src/pitwall/engine.py": "1408c6bf7ff8dd7f020b72a5d6be54ea0874cf8bf11e264b3fcd8e0a7ab6e43a",
+    "src/pitwall/events.py": "a45ebac9055664f0cb5da94bfcaf9f5cc1fa88b21f2996bb715da45577a1eb27",
+    "src/pitwall/gui.py": "86e513f26fdc1e7999c65714d78316f3f0888a9577973447aef8da959c723463",
+    "src/pitwall/models.py": "54dddc293dab64ff59744d35d5662d06f9df9912ec882e32e1e7c4e703d5085a",
+    "src/pitwall/monte_carlo.py": "2b48ca9ba6077516cfa22b0f2ff57e7abdf3c8de30d288ffec3c32a30ad1662d",
+    "src/pitwall/optimiser.py": "517eaf9d7041f29eeffadb77e654b1f843b8bbc62597b1fa53387122adbee7a2",
+    "src/pitwall/persistence.py": "f88c34b5fa0edc3798b1d8daf707793ad53b90162f0e165d7bf5dded36346a85",
+    "src/pitwall/physics.py": "9357559c256c18690d3061df63238513b4f0f13d7edd40c07a00a87d507eee90",
+    "scripts/benchmark_comparison.py": "fa59b73f2a6471faa46b5956d66485b99e0b4496456f5b25751e998760872170"
+  }
+}

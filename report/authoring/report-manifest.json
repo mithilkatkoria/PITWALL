@@ -1,0 +1,406 @@
+{
+  "figures": 10,
+  "tables": 33,
+  "headings": [
+    [
+      1,
+      "1 Analysis of the problem"
+    ],
+    [
+      2,
+      "1.1 Introduction"
+    ],
+    [
+      2,
+      "1.2 Description of the problem"
+    ],
+    [
+      2,
+      "1.3 Why computation is appropriate"
+    ],
+    [
+      2,
+      "1.4 Stakeholders"
+    ],
+    [
+      2,
+      "1.5 Research into existing solutions"
+    ],
+    [
+      2,
+      "1.6 Proposed computational solution"
+    ],
+    [
+      2,
+      "1.7 Essential features"
+    ],
+    [
+      2,
+      "1.8 Scope limitations"
+    ],
+    [
+      2,
+      "1.9 Hardware and software requirements"
+    ],
+    [
+      2,
+      "1.10 Success criteria"
+    ],
+    [
+      1,
+      "2 Design of the solution"
+    ],
+    [
+      2,
+      "2.1 Problem decomposition"
+    ],
+    [
+      2,
+      "2.2 Overall system structure"
+    ],
+    [
+      2,
+      "2.3 Class design"
+    ],
+    [
+      2,
+      "2.4 Data structures"
+    ],
+    [
+      2,
+      "2.5 Important variables"
+    ],
+    [
+      2,
+      "2.6 Algorithm design"
+    ],
+    [
+      2,
+      "2.7 Validation design"
+    ],
+    [
+      2,
+      "2.8 Usability design"
+    ],
+    [
+      2,
+      "2.9 Current interface design"
+    ],
+    [
+      2,
+      "2.10 Iterative test plan"
+    ],
+    [
+      2,
+      "2.11 Post-development test plan"
+    ],
+    [
+      1,
+      "3 Development and testing"
+    ],
+    [
+      2,
+      "3.1 Core models"
+    ],
+    [
+      2,
+      "3.2 Tyre degradation"
+    ],
+    [
+      2,
+      "3.3 Lap and fuel calculation"
+    ],
+    [
+      2,
+      "3.4 Pit stops and dry race"
+    ],
+    [
+      2,
+      "3.5 Strategy comparison"
+    ],
+    [
+      2,
+      "3.6 First desktop milestone"
+    ],
+    [
+      2,
+      "3.7 Event queue"
+    ],
+    [
+      2,
+      "3.8 Weather effects"
+    ],
+    [
+      2,
+      "3.9 Safety car"
+    ],
+    [
+      2,
+      "3.10 Seeded variation"
+    ],
+    [
+      2,
+      "3.11 Monte Carlo and statistics"
+    ],
+    [
+      2,
+      "3.12 Bounded optimisation"
+    ],
+    [
+      2,
+      "3.13 JSON persistence"
+    ],
+    [
+      2,
+      "3.14 Advanced GUI and charts"
+    ],
+    [
+      2,
+      "3.15 Robustness and verification"
+    ],
+    [
+      2,
+      "3.16 Genuine failures and remedial action"
+    ],
+    [
+      2,
+      "3.17 Recorded test progression"
+    ],
+    [
+      1,
+      "4 Post-development testing"
+    ],
+    [
+      2,
+      "4.1 Functional testing"
+    ],
+    [
+      2,
+      "4.2 Robustness testing"
+    ],
+    [
+      2,
+      "4.3 Performance testing"
+    ],
+    [
+      2,
+      "4.4 Manual verification"
+    ],
+    [
+      2,
+      "4.5 Usability testing"
+    ],
+    [
+      1,
+      "5 Evaluation"
+    ],
+    [
+      2,
+      "5.1 Overall evaluation"
+    ],
+    [
+      2,
+      "5.2 Evaluation against success criteria"
+    ],
+    [
+      2,
+      "5.3 Functional correctness"
+    ],
+    [
+      2,
+      "5.4 Evaluation of algorithms"
+    ],
+    [
+      2,
+      "5.5 Performance"
+    ],
+    [
+      2,
+      "5.6 Robustness"
+    ],
+    [
+      2,
+      "5.7 Usability"
+    ],
+    [
+      2,
+      "5.8 Stakeholder evaluation"
+    ],
+    [
+      2,
+      "5.9 Maintenance"
+    ],
+    [
+      2,
+      "5.10 Limitations"
+    ],
+    [
+      2,
+      "5.11 Future improvements"
+    ],
+    [
+      2,
+      "5.12 Final conclusion"
+    ],
+    [
+      1,
+      "6 Bibliography"
+    ],
+    [
+      1,
+      "7 Appendices"
+    ],
+    [
+      2,
+      "Appendix A Source and class relationships"
+    ],
+    [
+      2,
+      "Appendix B Automated test inventory"
+    ],
+    [
+      2,
+      "Appendix C Execution and failure evidence"
+    ],
+    [
+      2,
+      "Appendix D Full benchmark values"
+    ],
+    [
+      2,
+      "Appendix E Research materials"
+    ],
+    [
+      2,
+      "Appendix F Stakeholder and candidate forms"
+    ],
+    [
+      2,
+      "Appendix G Git development summary"
+    ],
+    [
+      2,
+      "Appendix H Evidence catalogue and completeness audit"
+    ],
+    [
+      2,
+      "Appendix I JSON contract and example"
+    ],
+    [
+      2,
+      "Appendix J Additional application screenshots"
+    ],
+    [
+      2,
+      "Appendix K Development declaration"
+    ]
+  ],
+  "test_cases": 86,
+  "runs": [
+    [
+      "TEST-FINAL-20260908T213416753101Z",
+      86,
+      0,
+      "evidence/test-runs/TEST-FINAL-20260908T213416753101Z/results.xml"
+    ],
+    [
+      "TEST-I01-20260908T205847968425Z",
+      20,
+      0,
+      "evidence/test-runs/TEST-I01-20260908T205847968425Z/results.xml"
+    ],
+    [
+      "TEST-I02-20260908T205945777891Z",
+      27,
+      0,
+      "evidence/test-runs/TEST-I02-20260908T205945777891Z/results.xml"
+    ],
+    [
+      "TEST-I03-20260908T210046769795Z",
+      33,
+      0,
+      "evidence/test-runs/TEST-I03-20260908T210046769795Z/results.xml"
+    ],
+    [
+      "TEST-I05-20260908T210214046535Z",
+      41,
+      0,
+      "evidence/test-runs/TEST-I05-20260908T210214046535Z/results.xml"
+    ],
+    [
+      "TEST-I06-20260908T210320581715Z",
+      44,
+      0,
+      "evidence/test-runs/TEST-I06-20260908T210320581715Z/results.xml"
+    ],
+    [
+      "TEST-I07-20260908T210702638724Z",
+      48,
+      0,
+      "evidence/test-runs/TEST-I07-20260908T210702638724Z/results.xml"
+    ],
+    [
+      "TEST-I08-20260908T210944391018Z",
+      2,
+      0,
+      "evidence/test-runs/TEST-I08-20260908T210944391018Z/results.xml"
+    ],
+    [
+      "TEST-I09-20260908T211102758207Z",
+      12,
+      0,
+      "evidence/test-runs/TEST-I09-20260908T211102758207Z/results.xml"
+    ],
+    [
+      "TEST-I10-20260908T211214733077Z",
+      16,
+      0,
+      "evidence/test-runs/TEST-I10-20260908T211214733077Z/results.xml"
+    ],
+    [
+      "TEST-I11-20260908T211342964557Z",
+      21,
+      0,
+      "evidence/test-runs/TEST-I11-20260908T211342964557Z/results.xml"
+    ],
+    [
+      "TEST-I12-20260908T211512627796Z",
+      10,
+      0,
+      "evidence/test-runs/TEST-I12-20260908T211512627796Z/results.xml"
+    ],
+    [
+      "TEST-I13-20260908T211637569849Z",
+      3,
+      0,
+      "evidence/test-runs/TEST-I13-20260908T211637569849Z/results.xml"
+    ],
+    [
+      "TEST-I15-20260908T211824033057Z",
+      7,
+      0,
+      "evidence/test-runs/TEST-I15-20260908T211824033057Z/results.xml"
+    ],
+    [
+      "TEST-I16-20260908T212235136707Z",
+      79,
+      0,
+      "evidence/test-runs/TEST-I16-20260908T212235136707Z/results.xml"
+    ],
+    [
+      "TEST-I17-RETEST-20260908T212641586436Z",
+      84,
+      0,
+      "evidence/test-runs/TEST-I17-RETEST-20260908T212641586436Z/results.xml"
+    ],
+    [
+      "TEST-I17-ROBUSTNESS-20260908T212523289799Z",
+      5,
+      2,
+      "evidence/test-runs/TEST-I17-ROBUSTNESS-20260908T212523289799Z/results.xml"
+    ]
+  ],
+  "baseline_index_entries": 152,
+  "git_head": "ecf38296c5972ad4579848f2f42eb170709471de",
+  "generated_utc": "2026-09-08T22:24:25.872034+00:00"
+}

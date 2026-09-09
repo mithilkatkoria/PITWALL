@@ -1,0 +1,7 @@
+{
+  "focused": "evidence/test-runs/TEST-SC05-20260908T224145702053Z/results.xml",
+  "final": "evidence/test-runs/TEST-QUALITY-FINAL-20260908T224148466396Z/results.xml",
+  "comparison": "evidence/benchmarks/BENCH-COMPARE-20260908T224158666794Z/timings.json",
+  "test_count": 87,
+  "ocr_criteria_count": 24
+}

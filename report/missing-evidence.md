@@ -1,14 +1,12 @@
-# Missing evidence
+# Remaining evidence and approvals
 
-- Separate Full Mark Criteria document and confirmation of centre-specific requirements.
-- Teacher approval and assistance guidance, if required by the centre.
-- Candidate review and explanation of AI-assisted code and documentation.
-- Genuine stakeholder recruitment, responses and requirements review.
-- Manual GUI usability sessions and observations.
-- Genuine human post-development usability tests; automated robustness/functional runs exist.
-- Comparison-specific UI latency, memory profiling, other machines/OS and display scaling tests.
-- Independent calibrated parameter data or validation against real races (current values are illustrative).
-- Optional wet/intermediate compounds, random weather timing and richer traffic/SC models are not implemented.
-- Candidate-owned final evaluation and assessed document arrangement against the actual centre checklist.
+- Genuine stakeholder responses and requirements follow-up: docs/stakeholder/. Record actual post-prototype timing.
+- Genuine usability sessions, especially SC04 error interpretation and SC14 responsiveness/cancellation: docs/usability/.
+- Candidate explanations and dated reflection: docs/candidate/. All 15 understanding topics remain incomplete.
+- A genuine feedback-driven prospective iteration, only when feedback justifies a change. No iteration is invented now.
+- The candidate's separate Full Mark Criteria file was not located in the workspace or attachments. Official OCR content and marking bands were checked; centre-specific additions still need integration.
+- Teacher/centre approval, candidate authentication and required declaration format.
+- Publication permission covering timing, assessed work, stakeholder privacy and any centre-only material. No repository or release has been published.
+- Target-user installation, display scaling, GUI latency and independent real-race calibration remain unverified limitations.
 
-Existing evidence now includes17 planned stages with documented combinations/order changes, actual tests and failed/retested JSON cases, real Qt captures, three-repeat machine-specific benchmarks, versioned scenarios, exported search/Monte Carlo output and three source-based solution reviews. Their presence does not substitute for the missing human evidence above.
+Resolved technical gaps: SC05 explicit 1e-9-second assertions and SC13 separate comparison measurements now have genuine passing/output records. SC04 and SC14 remain PARTIALLY MET. The master report contains precise placeholders in 1.4, iteration reflections, 4.5, 5.7-5.8 and Appendix F. The factual assistance log remains in docs/assistance-log.md.

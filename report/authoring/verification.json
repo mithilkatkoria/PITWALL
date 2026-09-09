@@ -1,0 +1,11 @@
+{
+  "pages": 63,
+  "figures": 10,
+  "tables": 33,
+  "final_test_cases": 86,
+  "preserved_test_runs": 17,
+  "preserved_failure_assertions": 2,
+  "protected_files_hash_checked": 112,
+  "git_head_unchanged": "ecf38296c5972ad4579848f2f42eb170709471de",
+  "assistance_log_exists": true
+}

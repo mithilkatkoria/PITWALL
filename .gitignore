@@ -2,3 +2,47 @@
 __pycache__/
 .pytest_cache/
 *.pyc
+
+# Private records and local report/release working files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+private-evidence/
+**/completed-private/
+report/public-release/
+report/authoring/render*/
+.venv-public-check/
+
+# Local environments, caches and editor state
+.venv*/
+venv/
+env/
+.conda/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+*.pyo
+
+# Temporary files and generated report previews
+*.tmp
+*.temp
+*.swp
+*.swo
+~$*
+Thumbs.db
+.DS_Store
+/tmp/
+/temp/
+report/final-authoring/render*/
+
+# Local credentials
+.netrc
+.pypirc
+credentials.json
+*.p12
+*.pfx

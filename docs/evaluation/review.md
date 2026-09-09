@@ -1,6 +1,6 @@
 # Evidence-based prototype evaluation
 
-This is an assistant-authored review of actual implementation/output. Candidate judgement and genuine stakeholder validation are still required. The separate centre criteria file is unavailable; this is not a completed assessed submission.
+This technical review evaluates the recorded implementation and output. Candidate judgement and genuine stakeholder validation are still required. The separate centre criteria file is unavailable; this is not a completed assessed submission.
 
 ## Success criteria
 
@@ -10,7 +10,7 @@ This is an assistant-authored review of actual implementation/output. Candidate 
 | SC02 | FULLY MET computationally | Linear wear manual examples and editable three-compound inputs |
 | SC03 | FULLY MET computationally | Pit indexing, duplicate/final stops, consecutive same-compound resets tested |
 | SC04 | PARTIALLY MET | Model/parser errors and GUI recovery tested; genuine users have not judged explanations |
-| SC05 | FULLY MET computationally | Manual five-lap oracle and exact repeat tests |
+| SC05 | FULLY MET | Explicit absolute 1e-9-second oracle passes for every lap, cumulative time and total; exact replay passes. See docs/testing/final-quality-results.md |
 | SC06 | FULLY MET computationally/visually | Lap count/sum checks and actual Qt table capture |
 | SC07 | FULLY MET in model | Rankings, ties, metrics and stints tested; real-world strategy validity not claimed |
 | SC08 | FULLY MET for rendering | Actual Windows captures and graph-point tests; audience usability pending |
@@ -18,7 +18,7 @@ This is an assistant-authored review of actual implementation/output. Candidate 
 | SC10 | FULLY MET for simplified events | Queue tie tests and weather/SC arithmetic; wet tyre selection remains unsupported |
 | SC11 | FULLY MET for selected uncertainties | Seed replay, fixed statistics oracle, actual trial output and1000-trial benchmark |
 | SC12 | FULLY MET in constrained grid | Independent tiny exhaustive arithmetic, candidate counts and exported complete score list |
-| SC13 | PARTIALLY MET | Default search and1000-trial thresholds passed in BENCH-01; comparison-specific timing not separately recorded |
+| SC13 | FULLY MET | Original search/Monte Carlo targets passed; separate five-repeat comparison timings now recorded. GUI latency and other machines remain outside these measurements. See docs/testing/final-quality-results.md |
 | SC14 | PARTIALLY MET | Worker tests/cancellation and stale-input checks; genuine manual responsiveness observations pending |
 
 Latest executed results and their evidence paths are indexed in `report/test-results.csv`. Earlier failures remain visible. Automated passing tests demonstrate their assertions, not absence of every possible bug.

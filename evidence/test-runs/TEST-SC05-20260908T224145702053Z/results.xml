@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.052" timestamp="2026-09-08T23:41:47.969065+01:00" hostname="m1t-xz"><testcase classname="tests.test_sc05_tolerance" name="test_five_lap_oracle_absolute_tolerance" time="0.003" /></testsuite></testsuites>
